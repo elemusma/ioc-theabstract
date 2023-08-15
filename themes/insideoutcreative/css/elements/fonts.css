@@ -57,20 +57,20 @@ a.text-black:hover {
 
 html,
 body {
-  font-family: "proxima_novaregular";
+  font-family: var(--proxima-nova);
 }
 
 .light {
-  font-family: "proxima_nova_altlight";
+  font-weight: 300;
 }
 
 .thin {
-  font-family: "proxima_novathin";
+  font-weight: 100;
 }
 
 .bold,
 strong {
-  font-family: "proxima_novabold";
+  font-weight: 700;
 }
 
 .arrows li {

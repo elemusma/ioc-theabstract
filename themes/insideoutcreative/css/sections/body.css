@@ -1,6 +1,7 @@
 :root {
   --accent-primary: #e65525;
   --accent-secondary: #182236;
+  --proxima-nova: proxima-nova, sans-serif;
 }
 
 html {
