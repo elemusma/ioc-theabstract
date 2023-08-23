@@ -4,6 +4,8 @@ add_action( 'init', 'register_acf_blocks' );
 
 function register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/content' );
+    register_block_type( __DIR__ . '/blocks/industries' );
+    register_block_type( __DIR__ . '/blocks/about' );
 }
 
 function ioc_stylesheets() {
@@ -14,22 +16,12 @@ wp_enqueue_style('body', get_theme_file_uri('/css/sections/body.css'));
 wp_enqueue_style('nav', get_theme_file_uri('/css/sections/nav.css'));
 wp_enqueue_style('popup', get_theme_file_uri('/css/sections/popup.css'));
 // wp_enqueue_style('hero', get_theme_file_uri('/css/sections/hero.css'));
-wp_enqueue_style('contact', get_theme_file_uri('/blocks/contact.css'));
+wp_enqueue_style('contact', get_theme_file_uri('/blocks/global-contact.css'));
 wp_enqueue_style('img', get_theme_file_uri('/css/elements/img.css'));
 
-// if(is_front_page()){
-	wp_enqueue_style('home', get_theme_file_uri('/css/sections/home.css'));
-// }
-if(is_page_template('templates/about.php')){
-	wp_enqueue_style('about-custom', get_theme_file_uri('/css/sections/about.css'));
-	wp_enqueue_style('intro', get_theme_file_uri('/css/sections/intro.css'));
-}
-if( is_page_template('templates/content-page.php' ) ){
-	wp_enqueue_style('content-page', get_theme_file_uri('/css/sections/content-page.css'));
-}
-if(is_single() || is_page_template('templates/blog.php') || is_archive() || is_category() || is_tag() || is_404() ) {
-wp_enqueue_style('blog', get_theme_file_uri('/css/sections/blog.css'));
-}
+
+	// wp_enqueue_style('home', get_theme_file_uri('/css/sections/home.css'));
+
 
 wp_enqueue_style('photo-gallery', get_theme_file_uri('/css/sections/photo-gallery.css'));
 wp_enqueue_style('footer', get_theme_file_uri('/css/sections/footer.css'));
@@ -42,6 +34,7 @@ wp_enqueue_style('fonts', get_theme_file_uri('/css/elements/fonts.css'));
 wp_enqueue_style('blair-itc', get_theme_file_uri('/blair-itc/blair-itc.css'));
 wp_enqueue_style('aspira', get_theme_file_uri('/aspira-font/aspira-font.css'));
 wp_enqueue_style('coromant-garamond', '//use.typekit.net/fqe2slt.css');
+wp_enqueue_style('handel', '//use.typekit.net/lcf3uey.css');
 wp_enqueue_style('proxima-nova', '//use.typekit.net/juf0ejx.css');
 
 }
@@ -50,26 +43,26 @@ add_action('wp_enqueue_scripts', 'ioc_stylesheets');
 function ioc_stylesheets_footer() {
 	// wp_enqueue_style('style-footer', get_theme_file_uri('/css/style-footer.css'));
 	// owl carousel
-	wp_enqueue_style('owl.carousel.min', get_theme_file_uri('/owl-carousel/owl.carousel.min.css'));
-	wp_enqueue_style('owl.theme.default', get_theme_file_uri('/owl-carousel/owl.theme.default.min.css'));
-	wp_enqueue_style('lightbox-css', get_theme_file_uri('/lightbox/lightbox.min.css'));
+	// wp_enqueue_style('owl.carousel.min', get_theme_file_uri('/owl-carousel/owl.carousel.min.css'));
+	// wp_enqueue_style('owl.theme.default', get_theme_file_uri('/owl-carousel/owl.theme.default.min.css'));
+	// wp_enqueue_style('lightbox-css', get_theme_file_uri('/lightbox/lightbox.min.css'));
 	// wp_enqueue_script('font-awesome', '//use.fontawesome.com/fff80caa08.js');
 
 	// owl carousel
-	wp_enqueue_script('jquery-min', get_theme_file_uri('/owl-carousel/jquery.min.js'));
-	wp_enqueue_script('owl-carousel', get_theme_file_uri('/owl-carousel/owl.carousel.min.js'));
-	wp_enqueue_script('owl-carousel-custom', get_theme_file_uri('/owl-carousel/owl-carousels.js'));
-	wp_enqueue_script('lightbox-min-js', get_theme_file_uri('/lightbox/lightbox.min.js'));
-	wp_enqueue_script('lightbox-js', get_theme_file_uri('/lightbox/lightbox.js'));
+	// wp_enqueue_script('jquery-min', get_theme_file_uri('/owl-carousel/jquery.min.js'));
+	// wp_enqueue_script('owl-carousel', get_theme_file_uri('/owl-carousel/owl.carousel.min.js'));
+	// wp_enqueue_script('owl-carousel-custom', get_theme_file_uri('/owl-carousel/owl-carousels.js'));
+	// wp_enqueue_script('lightbox-min-js', get_theme_file_uri('/lightbox/lightbox.min.js'));
+	// wp_enqueue_script('lightbox-js', get_theme_file_uri('/lightbox/lightbox.js'));
     // aos
-    wp_enqueue_script('aos-js', get_theme_file_uri('/aos/aos.js'));
-    wp_enqueue_script('aos-custom-js', get_theme_file_uri('/aos/aos-custom.js'));
-    wp_enqueue_style('aos-css', get_theme_file_uri('/aos/aos.css'));
+    // wp_enqueue_script('aos-js', get_theme_file_uri('/aos/aos.js'));
+    // wp_enqueue_script('aos-custom-js', get_theme_file_uri('/aos/aos-custom.js'));
+    // wp_enqueue_style('aos-css', get_theme_file_uri('/aos/aos.css'));
 
 	// jquery fittext
-	wp_enqueue_script('jquery-min-js', get_theme_file_uri('/jquery-fittext/jquery.min.js'));
-    wp_enqueue_script('jquery-fittext', get_theme_file_uri('/jquery-fittext/jquery.fittext.js'));
-    wp_enqueue_script('jquery-fittext-custom', get_theme_file_uri('/jquery-fittext/fittext.js'));
+	// wp_enqueue_script('jquery-min-js', get_theme_file_uri('/jquery-fittext/jquery.min.js'));
+    // wp_enqueue_script('jquery-fittext', get_theme_file_uri('/jquery-fittext/jquery.fittext.js'));
+    // wp_enqueue_script('jquery-fittext-custom', get_theme_file_uri('/jquery-fittext/fittext.js'));
 	// jquery modal
 	// wp_enqueue_script('jquery-modal-js', get_theme_file_uri('/jquery-modal/jquery.modal.min.js'));
 	// wp_enqueue_style('jquery-modal-css', get_theme_file_uri('/jquery-modal/jquery.modal.min.css'));
@@ -196,7 +189,15 @@ function btn_shortcode( $atts, $content = null ) {
 	if (strpos($id, 'modal') !== false) {
 		return '<span class="btn-main ' . esc_attr($a['class']) . '" aria-label="' . esc_attr($a['aria-label']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '">' . $content . '</span>';
 	} else {
-		return '<a class="btn-main ' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '">' . $content . '</a>';
+		$output .= '<a class="btn-main ' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '" style="text-decoration:none;border: 2px solid #d7d7d7;display: inline-block;padding: 5px;color:#acacac;' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '">';
+
+		$output .= '<div class="bg-black" style="padding: 15px 25px;transition:all .25s ease-in-out;">';
+		$output .= $content;
+		$output .= '</div>';
+
+		$output .= '</a>';
+
+		return $output;
 	}
 	
 	// [button href="#" class="btn-main" style=""]Learn More[/button]

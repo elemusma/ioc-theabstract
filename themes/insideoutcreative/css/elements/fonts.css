@@ -105,7 +105,31 @@ blockquote {
   font-family: cormorant-garamond, serif;
 }
 
+.handel,
+h1,
+.h1 {
+  font-family: handel-gothic, sans-serif;
+}
+
+.chennai {
+  font-family: chennai, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.list-unstyled {
+  list-style: none;
+}
+
 /* 
+
+font-family: chennai, sans-serif;
+
+font-family: handel-gothic, sans-serif;
+
 font-family: cormorant-garamond, serif; 
 font-weight:300;
 font-weight:400;
