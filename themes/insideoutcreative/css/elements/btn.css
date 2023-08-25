@@ -14,15 +14,6 @@
     text-decoration: none;
 }
 
-.btn-main {
-    /* background: var(--accent-primary); */
-    /* padding: 10px 25px;
-    transition: all .25s ease-in-out;
-    display: inline-block;
-    text-decoration: none; */
-
-}
-
 .btn-main:hover .bg-black {
     background: var(--accent-primary);
     color: white;

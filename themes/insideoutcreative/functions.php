@@ -6,7 +6,10 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/content' );
     register_block_type( __DIR__ . '/blocks/industries' );
     register_block_type( __DIR__ . '/blocks/about' );
+    register_block_type( __DIR__ . '/blocks/popup' );
+    register_block_type( __DIR__ . '/blocks/applications' );
 }
+
 
 function ioc_stylesheets() {
 wp_enqueue_style('style', get_stylesheet_uri() );
@@ -14,7 +17,7 @@ wp_enqueue_style('style', get_stylesheet_uri() );
 wp_enqueue_style('layouts', get_theme_file_uri('/css/sections/layouts.css'));
 wp_enqueue_style('body', get_theme_file_uri('/css/sections/body.css'));
 wp_enqueue_style('nav', get_theme_file_uri('/css/sections/nav.css'));
-wp_enqueue_style('popup', get_theme_file_uri('/css/sections/popup.css'));
+wp_enqueue_style('popup', get_theme_file_uri('/blocks/popup/popup.css'));
 // wp_enqueue_style('hero', get_theme_file_uri('/css/sections/hero.css'));
 wp_enqueue_style('contact', get_theme_file_uri('/blocks/global-contact.css'));
 wp_enqueue_style('img', get_theme_file_uri('/css/elements/img.css'));
