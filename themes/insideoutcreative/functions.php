@@ -8,6 +8,10 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/about' );
     register_block_type( __DIR__ . '/blocks/popup' );
     register_block_type( __DIR__ . '/blocks/applications' );
+	register_block_type( __DIR__ . '/blocks/full-width-row' );
+	register_block_type( __DIR__ . '/blocks/honeycomb-part-two' );
+	register_block_type( __DIR__ . '/blocks/process' );
+	register_block_type( __DIR__ . '/blocks/testimonials' );
 }
 
 
@@ -288,31 +292,6 @@ function my_page_title_shortcode() {
 }
 add_shortcode('page_title', 'my_page_title_shortcode');
 
-function redirect_relative_urls() {
-	if (is_admin()) {
-	  return;
-	}
-  
-	ob_start('rewrite_relative_urls');
-  }
-  
-function rewrite_relative_urls($content) {
-$base_url = home_url('/');
-
-// Regex pattern to match relative URLs
-$pattern = '/(href|src)=["\'](?!http|\/\/)([^"\']+)[\'"]/i';
-
-// Replace relative URLs with absolute URLs
-$content = preg_replace_callback($pattern, function ($matches) use ($base_url) {
-	$relative_url = $matches[2];
-	$absolute_url = $base_url . ltrim($relative_url, '/');
-	return $matches[1] . '="' . $absolute_url . '"';
-}, $content);
-
-return $content;
-}
-
-add_action('template_redirect', 'redirect_relative_urls');
 
 // ENABLE WOOCOMMERCE
 // add_action('after_setup_theme',function() {

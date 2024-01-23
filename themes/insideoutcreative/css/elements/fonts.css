@@ -16,7 +16,8 @@ a {
   color: var(--accent-secondary);
 }
 
-.text-accent-tertiary {
+.text-accent-tertiary,
+.text-accent-green-1 {
   color: var(--accent-tertiary);
 }
 

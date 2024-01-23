@@ -61,7 +61,7 @@ echo '</div>';
 echo '</div>';
 echo '</section>';
 echo '<div class="text-center" style="background:#d9d9d9;padding:10px 0px;margin:10px 0px;">';
-    echo '<p class="" style="margin:0;"><a href="https://insideoutcreative.io" target="_blank" rel="noopener noreferrer" style="color:#848484;text-decoration:none;">WEB DEVELOPMENT &amp; DESIGN</a> BY INSIDE OUT CREATIVE</p>';
+    echo '<p class="" style="margin:0;"><a href="https://buildupuniversity.com" target="_blank" rel="noopener noreferrer" style="color:#848484;text-decoration:none;">WEB DEVELOPMENT &amp; DESIGN</a> BY BUILDUP</p>';
 echo '</div>';
 echo '</footer>';
 

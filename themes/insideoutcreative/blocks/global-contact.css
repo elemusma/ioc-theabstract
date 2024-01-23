@@ -20,6 +20,12 @@ input.gform_button.button:hover {
 
 .gform_footer.top_label {
     margin-bottom: -90px !important;
+    z-index: 10;
+    position: relative;
+}
+
+.gfield {
+    text-align: left;
 }
 
 input,
@@ -32,6 +38,10 @@ input[type=file] {
     background: transparent;
     box-shadow: none;
     border: none;
+}
+
+iframe#gform_ajax_frame_1 {
+    opacity: 0;
 }
 
 /* custom form */
