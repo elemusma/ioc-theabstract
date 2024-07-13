@@ -7,7 +7,16 @@ wp_enqueue_style('owl.theme.default', get_theme_file_uri('/owl-carousel/owl.them
 wp_enqueue_style('lightbox-css', get_theme_file_uri('/lightbox/lightbox.min.css'));
 
 // start of process
-echo '<section class="pb-5">';
+echo '<section class="position-relative ' . get_field('classes') . '" style="' . get_field('style') . '" id="' . get_field('id') . '">';
+
+echo '<div class="container">';
+echo '<div class="row justify-content-center">';
+
+echo get_template_part('partials/content-block');
+
+echo '</div>';
+echo '</div>';
+
 echo '<div class="process-carousel owl-carousel owl-theme">';
 
 

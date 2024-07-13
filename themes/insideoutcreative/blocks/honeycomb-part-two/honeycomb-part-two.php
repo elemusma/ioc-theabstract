@@ -1,6 +1,6 @@
 <?php
 // start of improve
-echo '<section class="pt-5 pb-5 position-relative" id="what-we-do">';
+echo '<section class="position-relative ' . get_field('classes') . '" style="' . get_field('style') . '" id="' . get_field('id') . '">';
 
 // $improveBgDivider = get_field('improve_bg_img');
 echo get_template_part('partials/bg-img');
@@ -36,8 +36,8 @@ echo '<div class="row position-relative justify-content-start">';
 $gallery = get_field('honey_comb_part_two_images');
 if( $gallery ): 
 foreach( $gallery as $image ):
-
-echo '<a data-aos="' . $animationGroup['type'] . '" data-aos-delay="' . $animationGroup['delay'] . '" class="col-md-12 col-improve-top-row-links text-white text-center d-flex justify-content-center overflow-h">';
+// $animationGroup = get_sub_field('animation');
+echo '<a class="col-md-12 col-improve-top-row-links text-white text-center d-flex justify-content-center overflow-h">';
 
 echo '<div class="overlay-custom position-absolute w-100 h-100 z-1" style="pointer-events:none;"></div>';
 

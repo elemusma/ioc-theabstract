@@ -12,6 +12,8 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/honeycomb-part-two' );
 	register_block_type( __DIR__ . '/blocks/process' );
 	register_block_type( __DIR__ . '/blocks/testimonials' );
+	register_block_type( __DIR__ . '/blocks/carousel-gallery' );
+	register_block_type( __DIR__ . '/blocks/instagram-feed' );
 }
 
 
